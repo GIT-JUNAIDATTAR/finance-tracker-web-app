@@ -1,0 +1,352 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: url("/bg-img.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  color: #333;
+  font-size: 16px;
+  padding: 10px;
+}
+
+/* Header */
+.headerBar {
+  background-color: rgba(47, 64, 80, 0.8);
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.title {
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.topbar {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.currency,
+.balance {
+  font-size: 28px;
+  font-weight: 400;
+  color: #64b5f6;
+}
+
+/* Content Section */
+.content {
+  width: 60%; /* Increased width for desktop */
+  margin: 0 auto;
+  background-color: transparent;
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.secondTitle {
+  background-color: #3f51b5;
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  font-size: 1.5em;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+  padding: 20px;
+  background: transparent;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formLine {
+  display: flex;
+  margin: 5px 0;
+  flex-wrap: wrap;
+}
+
+.left,
+.right {
+  width: 48%;
+}
+
+#expForm {
+  width: 100%;
+}
+
+label {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #2f4050;
+  margin-bottom: 8px;
+}
+
+/* Styling input and select fields */
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  font-size: 1em;
+  font-weight: 500;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  background-color: transparent;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  color: #ddd;
+}
+
+option {
+  color: #303f9f;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+input:focus,
+select:focus {
+  border-color: #3f51b5;
+  outline: none;
+  background-color: transparent;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1em;
+  color: #ffffff;
+  background-color: #3f51b5;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #303f9f;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #3f51b5;
+  color: white;
+  font-size: 1em;
+}
+
+tbody {
+  background-color: #fafafa;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+  font-size: 1.1em;
+}
+
+th {
+  font-weight: bold;
+}
+
+tbody tr:hover {
+  background-color: #e3f2fd;
+}
+
+/* Span and other text elements */
+span {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+/* Responsive Styles */
+
+/* For tablets (screen widths 768px to 1024px) */
+@media (max-width: 1024px) {
+  .content {
+    width: 75%;
+    padding-left: 5%;
+  }
+
+  .secondTitle {
+    font-size: 1.4em;
+  }
+
+  .formLine {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  input,
+  select {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  .currency,
+  .balance {
+    font-size: 22px;
+  }
+
+  .topbar {
+    font-size: 1em;
+  }
+}
+
+/* For smaller tablets and larger mobile devices (screen widths 600px to 768px) */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .content {
+    width: 85%;
+  }
+
+  .title {
+    font-size: 1.8em;
+  }
+
+  .secondTitle {
+    font-size: 1.3em;
+    margin-top: 40px;
+  }
+
+  .form {
+    padding-left: 0;
+  }
+
+  .formLine {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  input,
+  select {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  .currency,
+  .balance {
+    font-size: 20px;
+  }
+
+  .topbar {
+    font-size: 1em;
+  }
+}
+
+/* For mobile devices (screen widths up to 600px) */
+@media (max-width: 600px) {
+  body {
+    padding: 5px;
+  }
+
+  .headerBar {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 1.6em;
+  }
+
+  .topbar,
+  .currency,
+  .balance {
+    font-size: 16px;
+  }
+
+  .content {
+    width: 100%;
+    padding-left: 5%;
+  }
+
+  .secondTitle {
+    font-size: 1.2em;
+    margin-top: 30px;
+  }
+
+  .form {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .formLine {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  input,
+  select {
+    width: 100%;
+    font-size: 1em;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  .currency,
+  .balance {
+    font-size: 16px;
+  }
+
+  .topbar {
+    font-size: 1em;
+  }
+}
